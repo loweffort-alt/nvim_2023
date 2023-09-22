@@ -18,6 +18,9 @@ require("lazy").setup({
 	{ "hachy/eva01.vim", branch = "main" },
 	--{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 
+	-- Mover el cursor
+	"phaazon/hop.nvim",
+
 	-- Navegar entre tabs
 	"christoomey/vim-tmux-navigator",
 
