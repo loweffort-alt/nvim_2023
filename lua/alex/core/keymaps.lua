@@ -7,6 +7,8 @@ keymap.set("n", "<leader>o", "o <ESC>") -- Salir d nvim
 keymap.set("n", "<leader>O", "O <CR>") -- Salir d nvim
 keymap.set("n", "<A-j>", "10<C-E>") -- Bajar 10 líneas
 keymap.set("n", "<A-k>", "10<C-Y>") -- Subir 10 líneas
+keymap.set("n", "<A-l>", "20zl") -- Subir 10 líneas
+keymap.set("n", "<A-h>", "20zh") -- Subir 10 líneas
 keymap.set("n", "x", '"_x') -- Borrar sin yankear
 
 keymap.set("n", "<leader>sv", "<C-w>v") -- Split window vertically
