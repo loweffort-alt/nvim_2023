@@ -36,3 +36,4 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>") -- Open Telescope 
 keymap.set("n", "<leader>nj", ":NvimTreeToggle <CR>") -- Abrir nvim-tree
 
 keymap.set("n", "<leader>s", ":HopPattern <CR>") -- Abrir nvim-tree
+keymap.set("n", "<leader>x", ":!node %<CR>") -- Ejecutar javascript
