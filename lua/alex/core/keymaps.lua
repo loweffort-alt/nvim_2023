@@ -32,6 +32,7 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>") -- Open Telescope 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>") -- Open Telescope (file navigation)
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>") -- Open buffers (file navigation)
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>") -- Open Telescope (file navigation)
+keymap.set("n", "<leader>b", ":b# <CR>") -- Abrir nvim-tree
 
 keymap.set("n", "<leader>nj", ":NvimTreeToggle <CR>") -- Abrir nvim-tree
 
