@@ -1,16 +1,18 @@
-local indent_blankline_setup, indent_blankline = pcall(require, "indent_blankline")
+local indent_blankline_setup, ibl = pcall(require, "ibl")
 if not indent_blankline_setup then
 	return
 end
-vim.cmd([[highlight IndentBlanklineIndent1 guifg=#2c2d2f gui=nocombine]])
+local highlight = {
+    "RainbowRed",
+}
 
-vim.opt.list = true
-vim.opt.listchars:append("space:⋅")
+local hooks = require "ibl.hooks"
+-- create the highlight groups in the highlight setup hook, so they are reset
+-- every time the colorscheme changes
+hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+    vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#2c2d2f" })
+end)
 
-indent_blankline.setup({
-	space_char_blankline = " ",
-	show_current_context = true,
-	char_highlight_list = {
-		"IndentBlanklineIndent1",
-	},
+ibl.setup({
+  indent = { highlight = highlight }
 })

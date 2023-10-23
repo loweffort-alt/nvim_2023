@@ -14,9 +14,24 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 require("lazy").setup({
-	-- Evangelion Theme
-	{ "hachy/eva01.vim", branch = "main" },
-	--{ "ellisonleao/gruvbox.nvim", priority = 1000 },
+	-- Theme
+  --{
+    --"hachy/eva01.vim",
+    --branch = "main",
+    --lazy = false,
+    --opts = {},
+  --},
+  --{
+    --"ellisonleao/gruvbox.nvim",
+    --lazy = false,
+    --opts = {},
+  --},
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
 
 	-- Mover el cursor
 	"phaazon/hop.nvim",
@@ -86,8 +101,10 @@ require("lazy").setup({
 	"jose-elias-alvarez/typescript.nvim", -- additional functionality for typescript server (e.g. rename file & update imports)
 	"onsails/lspkind.nvim", -- vs-code like icons for autocompletion
 
-	"jose-elias-alvarez/null-ls.nvim", -- configure formatters & linters
-	"jayp0521/mason-null-ls.nvim", -- bridges gap b/w mason & null-ls
+  {
+    'stevearc/conform.nvim',
+    opts = {},
+  },
 
 	-- treesitter configuration
 	{
@@ -102,5 +119,5 @@ require("lazy").setup({
 	"windwp/nvim-ts-autotag",
 
 	-- Indent line
-	"lukas-reineke/indent-blankline.nvim",
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
 })
