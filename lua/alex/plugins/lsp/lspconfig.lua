@@ -92,7 +92,18 @@ lspconfig["astro"].setup({
 lspconfig["emmet_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+	filetypes = {
+		"html",
+		"javascript",
+		"astro",
+		"typescriptreact",
+		"javascriptreact",
+		"css",
+		"sass",
+		"scss",
+		"less",
+		"svelte",
+	},
 })
 
 -- configure lua server (with special settings)
