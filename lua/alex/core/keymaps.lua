@@ -36,5 +36,8 @@ keymap.set("n", "<leader>b", ":b# <CR>") -- Abrir nvim-tree
 
 keymap.set("n", "<leader>nj", ":NvimTreeToggle <CR>") -- Abrir nvim-tree
 
-keymap.set("n", "<leader>s", ":HopPattern <CR>") -- Abrir nvim-tree
+keymap.set("n", "<leader>ss", ":HopPattern <CR>") -- Abrir nvim-tree
 keymap.set("n", "<leader>x", ":!node %<CR>") -- Ejecutar javascript
+
+vim.keymap.set({ "i", "s" }, "<C-h>", "<cmd>lua require'luasnip'.jump(-1)<Cr>")
+vim.keymap.set({ "i", "s" }, "<C-l>", "<cmd>lua require('luasnip').jump(1)<Cr>")
