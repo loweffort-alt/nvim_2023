@@ -103,6 +103,7 @@ lspconfig["emmet_ls"].setup({
 		"scss",
 		"less",
 		"svelte",
+		"php",
 	},
 })
 
